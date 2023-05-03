@@ -1,1 +1,0 @@
-https://github.com/ivedants/Naive-Bayes-Spam-Email-Classifier
