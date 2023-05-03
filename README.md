@@ -1,11 +1,11 @@
-# HCMC University of Technology and Education 
-# Faculty of Information Technology 
 # Name of project: Build a Machine Learning Application Website 
+## HCMC University of Technology and Education 
+## Faculty of Information Technology
+### Member of group:
 
-Member of group:
-Vũ Nguyễn Trung Khang - 20110277
-Võ Ngọc Quý - 20110709
-Hồ Thành Danh - 20110207
+- Vũ Nguyễn Trung Khang - 20110277
+- Võ Ngọc Quý - 20110709
+- Hồ Thành Danh - 20110207
 
 ### Content:
 - Face Recognition
@@ -15,10 +15,10 @@ Hồ Thành Danh - 20110207
 - K-Nearest Neighbors (KNN)
 - Support Vector Machine (SVM)
 
-### app framework and language:
+### App framework and language:
 Streamlit, Python
 ### Setup:
-Clone project install all requirements in requirements.txt by run:
+Clone project: git clone https://github.com/roblnk/Machine_Learning.git and install all requirements in requirements.txt by run:
 pip install -r requirements.txt
 
 ### Build:
