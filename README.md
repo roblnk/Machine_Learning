@@ -1,4 +1,4 @@
-CHẠY file: strealit run manage.py
+run: streamlit run manage.py
 
 Thành viên:
 Vũ Nguyễn Trung Khang - 20110277
