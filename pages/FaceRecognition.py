@@ -7,7 +7,7 @@ st.markdown("# Face Recognition")
 st.sidebar.markdown("# Face Recognition")
 
 
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade\\haarcascade_frontalface_default.xml')
 
 def detect_faces(our_image):
     st.set_option('deprecation.showPyplotGlobalUse', False)
