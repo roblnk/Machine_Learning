@@ -5,7 +5,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 import joblib
-knn = joblib.load("knn_digit.pkl")
+knn = joblib.load("pages/KNN1/knn_digit.pkl")
+
+
 np.random.seed(100)
 N = 150
 centers = [[2, 3], [5, 5], [1, 8]]

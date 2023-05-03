@@ -57,10 +57,18 @@ elif app_mode == 'KNNa':
     predicted = knn.predict(test_data)
     accuracy = accuracy_score(predicted, test_labels)
     st.write('Độ chính xác: %.0f%%' % (accuracy*100))
-    joblib.dump(knn, "knn.pkl")
+    joblib.dump(knn, "pages/KNN1/knn.pkl")
 
 elif app_mode == 'KNNb':
-    st.title('KNNb')
-    from pages.KNN1.KNNb import *
-    app = App()
-    app.mainloop()
+        st.title('KNNb')
+        from pages.KNN1.KNNb import *
+        
+        app = App()
+        app.mainloop()
+       
+        from pages.KNN1.KNN import *
+        knn = joblib.load("pages/KNN1/knn_digit.pkl")
+
+        app_mode = 'KNN'
+        
+        

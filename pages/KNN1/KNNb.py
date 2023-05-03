@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.datasets import make_blobs
 import joblib
 
-knn = joblib.load("knn.pkl")
+knn = joblib.load("pages/KNN1/knn.pkl")
 
 class App(tk.Tk):
         def __init__(self):
