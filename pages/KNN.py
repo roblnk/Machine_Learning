@@ -13,7 +13,7 @@ def get_value(val,my_dict):
         if val == key:
             return value
 
-app_mode = st.sidebar.selectbox('Select Page',['KNN','KNNa','KNNb']) 
+app_mode = st.sidebar.selectbox('Select Page',['KNN','KNNa']) 
 
 if app_mode=='KNN':
     st.title("KNN") 
@@ -37,7 +37,7 @@ if app_mode=='KNN':
     accuracy = accuracy_score(predicted, test_labels)
     st.write('Độ chính xác: %.0f%%' % (accuracy*100))
 
-elif app_mode == 'KNNa':
+else:
     st.title('KNNa')
     from pages.KNN1.KNNa import *
     fig, ax = plt.subplots()
@@ -58,17 +58,4 @@ elif app_mode == 'KNNa':
     accuracy = accuracy_score(predicted, test_labels)
     st.write('Độ chính xác: %.0f%%' % (accuracy*100))
     joblib.dump(knn, "pages/KNN1/knn.pkl")
-
-elif app_mode == 'KNNb':
-        st.title('KNNb')
-        from pages.KNN1.KNNb import *
-        
-        app = App()
-        app.mainloop()
-        app.destroy()   
-        from pages.KNN1.KNN import *
-        knn = joblib.load("pages/KNN1/knn_digit.pkl")
-
-        app_mode = 'KNN'
-        
-        
+    
