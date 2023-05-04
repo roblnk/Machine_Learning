@@ -1,4 +1,4 @@
-opencv-python~=4.7.0.72
+opencv-python
 matplotlib~=3.5.2
 requests
 beautifulsoup4
