@@ -1,13 +1,13 @@
 opencv-python
-matplotlib~=3.5.2
+matplotlib
 requests
 beautifulsoup4
 streamlit
 numpy
 Pillow
-keras~=2.6.0
-tensorflow~=2.6.0
-scikit-learn~=1.1.1
+keras
+tensorflow
+scikit-learn
 scikit-image 
 scipy
 joblib
