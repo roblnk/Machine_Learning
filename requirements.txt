@@ -7,3 +7,8 @@ numpy
 Pillow
 keras~=2.6.0
 tensorflow~=2.6.0
+scikit-learn~=1.1.1
+scikit-image
+sklearn 
+scipy
+joblib

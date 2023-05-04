@@ -65,7 +65,7 @@ elif app_mode == 'KNNb':
         
         app = App()
         app.mainloop()
-       
+        app.destroy()   
         from pages.KNN1.KNN import *
         knn = joblib.load("pages/KNN1/knn_digit.pkl")
 
