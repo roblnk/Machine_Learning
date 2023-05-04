@@ -11,3 +11,4 @@ scikit-learn~=1.1.1
 scikit-image 
 scipy
 joblib
+streamlit-webrtc
