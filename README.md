@@ -22,13 +22,13 @@ Streamlit, Python
 ### Setup:
     pip install -r requirements.txt
 #### How to training in your Face Recognition?
-* First go to direct image in folder training and paste your foler that have your personal photos,then go to folder training:
+First go to direct image in folder training and paste your foler that have your personal photos,then go to folder training:
 
-        cd training
-        py training.py
-        cd ..    
-Next, go to FaceRecognition.py and set your [listmodels] orderly same as list folder arrived in folder image above:
-```R
+    cd training
+    py training.py
+    cd ..    
+Next, go to FaceRecognition.py and set your listmodels orderly same as list folder arrived in folder image above:
+```python
 listmodels = ['BanKiet', 'BanNghia', 'BanNguyen', 'BanThanh', 'SangSang', 'ThayDuc'] 
 ```
 ### Build:
