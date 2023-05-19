@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import joblib
 
-listmodels = ['BanKiet', 'BanNghia', 'BanNguyen', 'BanThanh', 'SangSang', 'ThayDuc']
+listmodels = ['BanKiet', 'BanNghia', 'BanNguyen', 'BanThanh', 'SangSang', 'ThayDuc'] ##Change Me
 
 st.markdown("# Face Recognition")
 st.sidebar.markdown("# Face Recognition")
