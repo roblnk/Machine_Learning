@@ -72,7 +72,7 @@ recognizer = cv2.FaceRecognizerSF.create(
             "../models/face_recognition_sface_2021dec.onnx","")
 
 
-metadata = load_metadata('../image')
+metadata = load_metadata('image')
 
 embedded = np.zeros((metadata.shape[0], 128))
 
