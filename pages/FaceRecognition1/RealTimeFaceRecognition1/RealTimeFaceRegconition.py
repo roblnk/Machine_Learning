@@ -47,26 +47,6 @@ def visualize(input, faces, fps, thickness=2):
             cv.circle(input, (coords[12], coords[13]), 2, (0, 255, 255), thickness)
     cv.putText(input, 'FPS: {:.2f}'.format(fps), (1, 16), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     detector = cv.FaceDetectorYN.create(
         'face_detection_yunet_2022mar.onnx',

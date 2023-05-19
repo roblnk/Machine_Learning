@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import joblib
 
+listmodels = ['BanKiet', 'BanNghia', 'BanNguyen', 'BanThanh', 'SangSang', 'ThayDuc']
+
 st.markdown("# Face Recognition")
 st.sidebar.markdown("# Face Recognition")
 
@@ -19,10 +21,10 @@ def get_value(val,my_dict):
         if val == key:
             return value
 
-app_mode = st.sidebar.selectbox('Select Page',['Real Time Face Regconition','Upload Image Face Regconition']) 
+app_mode = st.sidebar.selectbox('Select Page',['Upload Image Face Detection','Real Time Face Detection','Real Time Face Recognition',]) 
 
-if app_mode == 'Real Time Face Regconition':
-    
+if app_mode == 'Real Time Face Recognition':
+    st.title("Real Time Face Recognition")
     def visualize(input, faces, fps, thickness=2):
         if faces[1] is not None:
             for idx, face in enumerate(faces[1]):
@@ -38,7 +40,7 @@ if app_mode == 'Real Time Face Regconition':
         cv2.putText(input, 'FPS: {:.2f}'.format(fps), (1, 16), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
     
-    st.subheader('Nhận dạng khuôn mặt')
+    st.subheader('Nhận dạng khuôn mặt, mẫu từ file training')
     FRAME_WINDOW = st.image([])
     cap = cv2.VideoCapture(0)
 
@@ -66,10 +68,10 @@ if app_mode == 'Real Time Face Regconition':
         #FRAME_WINDOW.image(st.session_state.frame_stop, channels='BGR')
 
 
-    svc = joblib.load('pages/svc.pkl')
-    mydict = ['BanKiet', 'BanNghia', 'BanNguyen', 'BanThanh', 'SangSang', 'ThayDuc']
+    svc = joblib.load('models/svc.pkl')
+    mydict = listmodels
     detector = cv2.FaceDetectorYN.create(
-        'pages/face_detection_yunet_2022mar.onnx',
+        'models/face_detection_yunet_2022mar.onnx',
         "",
         (320, 320),
         0.9,
@@ -77,7 +79,7 @@ if app_mode == 'Real Time Face Regconition':
         5000)
     
     recognizer = cv2.FaceRecognizerSF.create(
-    'pages/face_recognition_sface_2021dec.onnx',"")
+    'models/face_recognition_sface_2021dec.onnx',"")
 
     tm = cv2.TickMeter()
 
@@ -114,7 +116,7 @@ if app_mode == 'Real Time Face Regconition':
    
 else:
 
-    st.title("Face Detection")
+    st.title("Face Detection By Image")
     st.write("Face detection is a central algorithm in computer vision. The algorithm implemented below is a Haar-Cascade Classifier. It detects several faces using OpenCV.")
 
     choice = st.radio("", ("Show Demo", "Browse an Image"))
@@ -167,3 +169,4 @@ else:
     elif choice == "Show Demo":
         our_image = Image.open("images/human1.jpg")
         detect_faces(our_image)
+        
