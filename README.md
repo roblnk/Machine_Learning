@@ -18,16 +18,16 @@
 ### App framework and language:
 Streamlit, Python
 ### Setup:
-Clone project: git clone https://github.com/roblnk/Machine_Learning.git 
+Clone project: ``` git clone https://github.com/roblnk/Machine_Learning.git ```
 
 then install all requirements in requirements.txt by run:
 
-pip install -r requirements.txt
+``` pip install -r requirements.txt ```
 
 ### Build:
 Local URL: http://localhost:8501
 
 ### Run project:
-streamlit run manage.py
+``` streamlit run manage.py ```
 
 
